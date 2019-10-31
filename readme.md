@@ -1,4 +1,4 @@
-# nasm runner and my homeworks
+# nasm compiler and my homeworks
 > You don't have to write your folder name inside of braces
 
 - **run.sh** - compiler
