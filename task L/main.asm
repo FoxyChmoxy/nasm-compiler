@@ -21,3 +21,6 @@ _start:
     ; call    iprintLF    ; call our integer printing with linefeed function
  
     ; call    quit
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80

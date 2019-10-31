@@ -28,3 +28,6 @@ _start:
     ; call    sprint          ; call our print function
  
     ; call    quit
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80

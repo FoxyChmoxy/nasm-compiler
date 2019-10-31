@@ -11,3 +11,7 @@ _start:
     mov     ebx, 1      ; write to the STDOUT file
     mov     eax, 4      ; invoke SYS_WRITE (kernel opcode 4)
     int     80h
+
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
