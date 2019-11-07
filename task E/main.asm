@@ -1,4 +1,4 @@
-; %include        'functions.asm'
+%include        'functions.asm'
  
 SECTION .data
 msg1        db      'Please enter your name: ', 0h      ; message string asking user for input
@@ -13,7 +13,7 @@ global  _start
 _start:
  
     mov     eax, msg1
-    ; call    sprint
+    call    sprint
  
     mov     edx, 255        ; number of bytes to read
     mov     ecx, sinput     ; reserved space to store our input (known as a buffer)
@@ -22,12 +22,9 @@ _start:
     int     80h
  
     mov     eax, msg2
-    ; call    sprint
+    call    sprint
  
     mov     eax, sinput     ; move our buffer into eax (Note: input contains a linefeed)
-    ; call    sprint          ; call our print function
+    call    sprint          ; call our print function
  
-    ; call    quit
-    mov eax, 1
-    xor ebx, ebx
-    int 0x80
+    call    quit
